@@ -1,0 +1,76 @@
+package exWhile;
+
+import java.util.Scanner;
+
+public class exDois {
+
+	public static void main(String[] args) {
+		Scanner leia =new Scanner(System.in);
+		char res;
+		int idade, genero, categoria;
+		int backend = 0, frontend = 0, fullstack = 0, mobile = 0;
+		int homem = 0, mulher = 0, outro = 0, mulFront = 0, homMob40 = 0, mulFull30 = 0; 
+		
+		System.out.println("Deseja cadastrar um novo colaborador? (s/n");
+		res = leia.next().charAt(0);
+		
+		while(res == 's') {
+			System.out.println("Digite a idade: ");
+			idade = leia.nextInt();
+			
+			System.out.println("Digite o gênero: ");
+			genero = leia.nextInt();
+			
+			switch(genero) {
+			case 1:
+				homem++;
+				break;
+			case 2:
+				mulher++;
+				break;
+			case 3:
+				outro++;
+				break;
+			}
+			
+			System.out.println("Digite a categoria: ");
+			categoria = leia.nextInt();
+			
+			switch(categoria) {
+			case 1:
+				backend++;
+				break;
+				
+			case 2:
+				frontend++;
+				break;
+				
+			case 3: 
+				mobile++;
+				break;
+				
+			case 4:
+				fullstack++;
+				break;
+				
+			if(genero == 2 && categoria == 2) {
+				mulFront++;
+				
+			}else if(genero == 1 && categoria == 3 && idade > 40) {
+				homMob40++;
+				
+			}else if(genero == 2 && categoria == 4 && idade < 300) {
+				mulFull30++;
+			}
+			
+		}
+			
+		System.out.println("Número de pessoas desenvolvedoras Backend: " + backend);
+		System.out.println("Número de mulheres desenvolvedoras Frontend: " + mulFront);
+		System.out.println("Número de homens desenvolvedores mobile maiores de 40 anos: " + homMob40);
+		System.out.println("Número de mulheres desenvolvedoras FullStack menores de 30 anos: " + mulFull30);
+		
+		leia.close();
+	}
+
+}

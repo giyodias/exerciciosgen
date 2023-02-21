@@ -1,0 +1,47 @@
+package exFor;
+
+import java.util.Scanner;
+
+public class ExDois {
+
+	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
+		int contador, num1, num2, num3;
+		int contPar = 0, contImpar = 0;
+		
+		System.out.println("Digite o 1º número");
+		num1 = leia.nextInt();
+		
+		System.out.println("Digite o 2º número");
+		num2 = leia.nextInt();
+		
+		System.out.println("Digite o 3º número");
+		num3 = leia.nextInt();
+		
+		for(contador = 1; contador <= 3; contador ++) {
+			if(num1 % 2 == 0) {
+				contPar++;
+			}else if(num1 % 2 != 0) {
+				contImpar++;
+			}
+			
+			if(num2 % 2 == 0) {
+				contPar++;
+			}else if(num2 % 2 != 0) {
+				contImpar++;
+			}
+			
+			if(num3 % 2 == 0) {
+				contPar++;
+			}else if(num3 % 2 != 0) {
+				contImpar++;
+			}
+			
+		}
+		System.out.println("Quantidade de números ímpares: " + contImpar);
+		System.out.println("Quantidade de números pares: " + contPar);
+		
+		leia.close();
+	}
+
+}
