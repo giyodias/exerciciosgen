@@ -10,7 +10,7 @@ public class ExDois {
 		int contador = 0, par = 0, impar = 0;
 		
 		for(contador = 1; contador <= 10; contador ++) {
-			System.out.println("Digite o " + contador + "º número");
+			System.out.println("Digite o " + contador + "º número: ");
 			numero = leia.nextInt();
 			
 			if(numero % 2 == 0) {
