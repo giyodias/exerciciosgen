@@ -15,7 +15,6 @@ public class ExTres {
 		for(int contador= 0; contador < 10; contador++) {
 			System.out.println("Digite um número: ");
 			numeros.add(leia.nextInt());
-			
 		}
 		
 		Iterator<Integer> iNumeros = numeros.iterator();
@@ -23,6 +22,7 @@ public class ExTres {
 		while(iNumeros.hasNext()) {
 			System.out.println(iNumeros.next());
 		}	
+		
 		leia.close();
 	}
 }
