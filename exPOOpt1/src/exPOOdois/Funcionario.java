@@ -4,15 +4,15 @@ public class Funcionario {
 	
 	private int idade;
 	private float salario;
-	private String cargo;
+	private String empresa;
 	private String formacao;
 	private String nome;
 	
-	public Funcionario(int idade, float salario, String cargo, String formacao, String nome) {
+	public Funcionario(int idade, float salario, String empresa, String formacao, String nome) {
 		super();
 		this.idade = idade;
 		this.salario = salario;
-		this.cargo = cargo;
+		this.empresa = empresa;
 		this.formacao = formacao;
 		this.nome = nome;
 	}
@@ -33,12 +33,12 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public String getCargo() {
-		return cargo;
+	public String getEmpresa() {
+		return empresa;
 	}
 
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
+	public void setEmpresa(String empresa) {
+		this.empresa = empresa;
 	}
 
 	public String getFormacao() {
@@ -64,10 +64,10 @@ public class Funcionario {
 		System.out.println("---------------------------------------------");
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Idade: " + this.idade);
-		System.out.println("Cargo: " + this.cargo);
+		System.out.println("Empresa: " + this.empresa);
 		System.out.println("Formação: " + this.formacao);
 		System.out.println("Salário: R$" + this.salario);
-		System.out.println("---------------------------------------------");
+		
 	}
 
 }

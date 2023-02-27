@@ -2,69 +2,94 @@ package exPOOum;
 
 public class Cliente {
 	
-	//atributos
-	private int idade;
+	private String email;
 	private String nome;
 	private String cidade;
 	private String telefone;
-	private String genero;
+	private String interesse;
 	
-	//metodo construtor
-	public Cliente(int idade, String nome, String cidade, String telefone, String genero) {
-		this.idade = idade;
+	public Cliente(String email, String nome, String cidade, String telefone, String interesse) {
+		
+		this.email = email;
 		this.nome = nome;
 		this.cidade = cidade;
 		this.telefone = telefone;
-		this.genero = genero;
+		this.interesse = interesse;
 	}
 
-	public int getIdade() {
-		return idade;
+	
+	
+	public String getEmail() {
+		return email;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
+
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
+
+
 
 	public String getNome() {
 		return nome;
 	}
 
+
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+
 
 	public String getCidade() {
 		return cidade;
 	}
 
+
+
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+
+
 
 	public String getTelefone() {
 		return telefone;
 	}
 
+
+
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
-	public String getGenero() {
-		return genero;
+
+
+	public String getInteresse() {
+		return interesse;
 	}
 
-	public void setGenero(String genero) {
-		this.genero = genero;
+
+
+	public void setInteresse(String interesse) {
+		this.interesse = interesse;
 	}
-	
+
+
+
 	public void visualizar() {
-		System.out.println("Dados do cliente: ");
+
+		System.out.println("---------------------------------------------");
+		System.out.println("             Dados do cliente:               ");
+		System.out.println("---------------------------------------------");
 		System.out.println("Nome: " + this.nome);
-		System.out.println("Idade: " + this.idade);
-		System.out.println("Gênero: " + this.genero);
+		System.out.println("E-mail: " + this.email);
 		System.out.println("Cidade: " + this.cidade);
 		System.out.println("Telefone: " + this.telefone);
+		System.out.println("Interesse: " + this.interesse);
+		
 	}
 
 }
